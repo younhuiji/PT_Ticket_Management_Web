@@ -6,5 +6,4 @@ import java.util.List;
 
 public interface PackageRepository extends JpaRepository<PackageEntity, Integer> {
     List<PackageEntity> findAllByOrderByPackageName();
-
 }

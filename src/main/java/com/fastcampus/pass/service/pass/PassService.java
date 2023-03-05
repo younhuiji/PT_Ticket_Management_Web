@@ -14,7 +14,6 @@ public class PassService {
     }
 
     public List<Pass> getPasses(final String userId) {
-        // userId를 조건으로 pass를 조회합니다. 이때 packageSeq에 맞는 package 정보도 필요합니다.
         final List<PassEntity> passEntities = passRepository.findByUserId(userId);
         return PassModelMapper.INSTANCE.map(passEntities);
 
